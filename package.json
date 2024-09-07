@@ -1,0 +1,52 @@
+{
+  "name": "shy-nav-webext",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A extension navigation Site.",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "compile": "vue-tsc --noEmit",
+    "lint": "eslint .",
+    "format": "eslint . --fix",
+    "typecheck": "vue-tsc --noEmit",
+    "postinstall": "wxt prepare"
+  },
+  "dependencies": {
+    "@iconify-json/carbon": "^1.2.1",
+    "@vueuse/core": "^11.0.3",
+    "axios": "^1.7.7",
+    "dayjs": "^1.11.13",
+    "jinrishici": "^1.0.6",
+    "pinia": "^2.2.2",
+    "swiper": "^11.1.12",
+    "tippy.js": "^6.3.7",
+    "uuid": "^10.0.0",
+    "vue": "^3.5.1",
+    "vue-router": "^4.4.3",
+    "vue-tippy": "^6.4.4",
+    "vuedraggable": "^4.1.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.2.0",
+    "@types/chrome": "^0.0.270",
+    "@types/uuid": "^10.0.0",
+    "@unocss/eslint-plugin": "^0.62.3",
+    "@unocss/reset": "^0.62.3",
+    "@wxt-dev/module-vue": "^1.0.1",
+    "eslint": "^9.9.1",
+    "sass": "^1.78.0",
+    "typescript": "^5.5.4",
+    "unocss": "^0.62.3",
+    "unplugin-auto-import": "^0.18.2",
+    "unplugin-vue-components": "^0.27.4",
+    "vite-plugin-pages": "^0.32.3",
+    "vue-tsc": "^2.1.6",
+    "wxt": "^0.19.9"
+  }
+}

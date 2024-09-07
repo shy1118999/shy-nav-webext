@@ -1,0 +1,27 @@
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+div {
+  box-sizing: border-box;
+}
+html.dark {
+  background: #121212;
+}
+
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+* {
+  text-shadow: 0 0 10px rgba(200, 200, 200, 0.4);
+}
+.dark * {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}

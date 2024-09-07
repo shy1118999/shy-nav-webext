@@ -1,0 +1,13 @@
+{
+  "extends": "./.wxt/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["entrypoints/newtab/*"]
+    },
+    "types": [
+      "vite-plugin-pages/client",
+      "chrome"
+    ]
+  }
+}
