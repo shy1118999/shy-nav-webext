@@ -10,6 +10,7 @@
 + TODO list app
 + Calendar app
 + dark/light mode
++ browser extension
 
 ## USED
 + [Vue.js 3](https://vuejs.org/)
@@ -17,6 +18,7 @@
 + [TypeScript](https://www.typescriptlang.org/)
 + [VueUse](https://vueuse.org/)
 + [Day.js](https://day.js.org/)
++ [WXT](https://github.com/wxt-dev/wxt)
 + [Swiper](https://swiperjs.com/)
 + [VueTippy](https://vue-tippy.netlify.app/)
 + [vue.draggable.next](https://github.com/SortableJS/vue.draggable.next)
