@@ -23,7 +23,3 @@ app.component('Calendar', Calendar)
 app.component('TodoList', TodoList)
 app.use(router)
 app.mount('#app')
-
-const bookmarks = chrome.bookmarks.getTree((bookmarkArray) => {
-  console.log(bookmarkArray)
-})
