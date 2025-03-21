@@ -118,6 +118,17 @@ const suggestEngine = [
   </div>
   <div mt-5 h-0 w-full border-t border-dashed />
   <div my-2 w-full flex items-center justify-between rounded-xl bg="white/20" p-3>
+    是否显示搜索栏
+    <div bg="gray/50" w-7em flex cursor-pointer overflow-hidden rounded-xl p-0 leading-35px>
+      <div :class="{ 'bg-green-400': appItemSetting.showSearchBar }" h-full w-full flex-1 px-2 @click="appItemSetting.showSearchBar = true">
+        显示
+      </div>
+      <div :class="{ 'bg-green-400': !appItemSetting.showSearchBar }" h-full w-full flex-1 px-2 @click="appItemSetting.showSearchBar = false">
+        隐藏
+      </div>
+    </div>
+  </div>
+  <div my-2 w-full flex items-center justify-between rounded-xl bg="white/20" p-3>
     底部显示
     <div bg="gray/50" w-7em flex cursor-pointer overflow-hidden rounded-xl p-0 leading-35px>
       <div :class="{ 'bg-green-400': appItemSetting.showTab }" h-full w-full flex-1 px-2 @click="appItemSetting.showTab = true">

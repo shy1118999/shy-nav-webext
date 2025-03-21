@@ -14,4 +14,5 @@ export default useStorage('shy-nav-app-item-setting', {
   iconNameColor: 'rgba(255,255,255,0.6)',
   showIconName: true,
   showTab: false,
+  showSearchBar: true,
 })

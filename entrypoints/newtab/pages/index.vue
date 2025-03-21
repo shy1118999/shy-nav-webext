@@ -128,7 +128,7 @@ function handleChangeMode() {
       <!-- 时间 -->
       <AppDateTime @click-time="handleChangeMode" />
       <!-- 搜索 -->
-      <AppSearch />
+      <AppSearch v-if="appItemSetting.showSearchBar !== false" />
       <template v-if="mode === Mode.Normal">
         <!-- apps -->
         <Apps />
