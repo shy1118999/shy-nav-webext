@@ -18,17 +18,26 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 function handleClick() {
-  if (props.url)
+  console.warn('click app item:', props.url)
+  if (props.url) {
+    // app://{appId}
+    const match = props.url.match(/^app:\/\/(.*)$/)
+    const appId = match?.[1]
+    if (match) {
+      fetch(`http://localhost:3916/api/apps/${appId}/launch`).catch(() => {
+
+      })
+      return
+    }
     window.open(props.url, '_blank')
+  }
 }
 </script>
 
 <template>
   <div
-
     relative h-full w-full flex flex-col cursor-pointer items-center justify-center overflow-hidden
-    class="app-item-icon"
-    @click="handleClick"
+    class="app-item-icon" @click="handleClick"
   >
     <img :src="props.icon" :title="props.title" block h-full w-full object-cover>
   </div>
@@ -39,9 +48,11 @@ function handleClick() {
   transition: all 0.2s;
   border-radius: var(--icon-radius);
 }
-.app-item-icon:hover{
+
+.app-item-icon:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
+
 .dark .app-item-icon:hover {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }

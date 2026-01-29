@@ -31,6 +31,15 @@ const folderSize = computed(() => {
   else return 'small'
 })
 function handleClick(item: any) {
+  // app://{appId}
+  const match = item.url.match(/^app:\/\/(.*)$/)
+  const appId = match?.[1]
+  if (match) {
+    fetch(`http://localhost:3916/api/apps/${appId}/launch`).catch(() => {
+
+    })
+    return
+  }
   window.open(item.url, '_blank')
 }
 const showAllApps = ref(false)
