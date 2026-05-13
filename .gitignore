@@ -31,3 +31,6 @@ dist-ssr
 .idea/
 *.log
 
+.agents
+.claude
+.cursor
